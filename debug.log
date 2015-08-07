@@ -1,0 +1,295 @@
+Internal Server Error: /admin/blog/post/
+Traceback (most recent call last):
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/core/handlers/base.py", line 137, in get_response
+    response = response.render()
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/response.py", line 103, in render
+    self.content = self.rendered_content
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/response.py", line 80, in rendered_content
+    content = template.render(context)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/base.py", line 148, in render
+    return self._render(context)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/base.py", line 142, in _render
+    return self.nodelist.render(context)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/base.py", line 844, in render
+    bit = self.render_node(node, context)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/debug.py", line 80, in render_node
+    return node.render(context)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/loader_tags.py", line 126, in render
+    return compiled_parent._render(context)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/base.py", line 142, in _render
+    return self.nodelist.render(context)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/base.py", line 844, in render
+    bit = self.render_node(node, context)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/debug.py", line 80, in render_node
+    return node.render(context)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/loader_tags.py", line 126, in render
+    return compiled_parent._render(context)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/base.py", line 142, in _render
+    return self.nodelist.render(context)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/base.py", line 844, in render
+    bit = self.render_node(node, context)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/debug.py", line 80, in render_node
+    return node.render(context)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/base.py", line 844, in render
+    bit = self.render_node(node, context)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/debug.py", line 80, in render_node
+    return node.render(context)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/base.py", line 844, in render
+    bit = self.render_node(node, context)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/debug.py", line 80, in render_node
+    return node.render(context)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/base.py", line 1207, in render
+    _dict = func(*resolved_args, **resolved_kwargs)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/contrib/admin/templatetags/admin_list.py", line 316, in result_list
+    'results': list(results(cl))}
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/contrib/admin/templatetags/admin_list.py", line 292, in results
+    yield ResultList(None, items_for_result(cl, res, None))
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/contrib/admin/templatetags/admin_list.py", line 283, in __init__
+    super(ResultList, self).__init__(*items)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/contrib/admin/templatetags/admin_list.py", line 198, in items_for_result
+    f, attr, value = lookup_field(field_name, result, cl.model_admin)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/contrib/admin/utils.py", line 280, in lookup_field
+    value = attr()
+  File "/Users/kinsalayon/http/kindredkode/blog/models.py", line 98, in exceprt
+    theExceprt += line
+TypeError: cannot concatenate 'str' and 'list' objects
+Internal Server Error: /admin/blog/post/
+Traceback (most recent call last):
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/core/handlers/base.py", line 137, in get_response
+    response = response.render()
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/response.py", line 103, in render
+    self.content = self.rendered_content
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/response.py", line 80, in rendered_content
+    content = template.render(context)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/base.py", line 148, in render
+    return self._render(context)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/base.py", line 142, in _render
+    return self.nodelist.render(context)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/base.py", line 844, in render
+    bit = self.render_node(node, context)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/debug.py", line 80, in render_node
+    return node.render(context)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/loader_tags.py", line 126, in render
+    return compiled_parent._render(context)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/base.py", line 142, in _render
+    return self.nodelist.render(context)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/base.py", line 844, in render
+    bit = self.render_node(node, context)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/debug.py", line 80, in render_node
+    return node.render(context)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/loader_tags.py", line 126, in render
+    return compiled_parent._render(context)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/base.py", line 142, in _render
+    return self.nodelist.render(context)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/base.py", line 844, in render
+    bit = self.render_node(node, context)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/debug.py", line 80, in render_node
+    return node.render(context)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/base.py", line 844, in render
+    bit = self.render_node(node, context)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/debug.py", line 80, in render_node
+    return node.render(context)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/base.py", line 844, in render
+    bit = self.render_node(node, context)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/debug.py", line 80, in render_node
+    return node.render(context)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/base.py", line 1207, in render
+    _dict = func(*resolved_args, **resolved_kwargs)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/contrib/admin/templatetags/admin_list.py", line 316, in result_list
+    'results': list(results(cl))}
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/contrib/admin/templatetags/admin_list.py", line 292, in results
+    yield ResultList(None, items_for_result(cl, res, None))
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/contrib/admin/templatetags/admin_list.py", line 283, in __init__
+    super(ResultList, self).__init__(*items)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/contrib/admin/templatetags/admin_list.py", line 198, in items_for_result
+    f, attr, value = lookup_field(field_name, result, cl.model_admin)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/contrib/admin/utils.py", line 280, in lookup_field
+    value = attr()
+  File "/Users/kinsalayon/http/kindredkode/blog/models.py", line 98, in exceprt
+    theExceprt += ls
+TypeError: cannot concatenate 'str' and 'list' objects
+Internal Server Error: /admin/blog/post/
+Traceback (most recent call last):
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/core/handlers/base.py", line 137, in get_response
+    response = response.render()
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/response.py", line 103, in render
+    self.content = self.rendered_content
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/response.py", line 80, in rendered_content
+    content = template.render(context)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/base.py", line 148, in render
+    return self._render(context)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/base.py", line 142, in _render
+    return self.nodelist.render(context)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/base.py", line 844, in render
+    bit = self.render_node(node, context)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/debug.py", line 80, in render_node
+    return node.render(context)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/loader_tags.py", line 126, in render
+    return compiled_parent._render(context)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/base.py", line 142, in _render
+    return self.nodelist.render(context)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/base.py", line 844, in render
+    bit = self.render_node(node, context)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/debug.py", line 80, in render_node
+    return node.render(context)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/loader_tags.py", line 126, in render
+    return compiled_parent._render(context)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/base.py", line 142, in _render
+    return self.nodelist.render(context)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/base.py", line 844, in render
+    bit = self.render_node(node, context)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/debug.py", line 80, in render_node
+    return node.render(context)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/base.py", line 844, in render
+    bit = self.render_node(node, context)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/debug.py", line 80, in render_node
+    return node.render(context)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/base.py", line 844, in render
+    bit = self.render_node(node, context)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/debug.py", line 80, in render_node
+    return node.render(context)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/base.py", line 1207, in render
+    _dict = func(*resolved_args, **resolved_kwargs)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/contrib/admin/templatetags/admin_list.py", line 316, in result_list
+    'results': list(results(cl))}
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/contrib/admin/templatetags/admin_list.py", line 292, in results
+    yield ResultList(None, items_for_result(cl, res, None))
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/contrib/admin/templatetags/admin_list.py", line 283, in __init__
+    super(ResultList, self).__init__(*items)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/contrib/admin/templatetags/admin_list.py", line 198, in items_for_result
+    f, attr, value = lookup_field(field_name, result, cl.model_admin)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/contrib/admin/utils.py", line 280, in lookup_field
+    value = attr()
+  File "/Users/kinsalayon/http/kindredkode/blog/models.py", line 97, in exceprt
+    return ''.join(res)
+TypeError: sequence item 0: expected string, list found
+Internal Server Error: /admin/blog/post/
+Traceback (most recent call last):
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/core/handlers/base.py", line 137, in get_response
+    response = response.render()
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/response.py", line 103, in render
+    self.content = self.rendered_content
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/response.py", line 80, in rendered_content
+    content = template.render(context)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/base.py", line 148, in render
+    return self._render(context)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/base.py", line 142, in _render
+    return self.nodelist.render(context)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/base.py", line 844, in render
+    bit = self.render_node(node, context)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/debug.py", line 80, in render_node
+    return node.render(context)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/loader_tags.py", line 126, in render
+    return compiled_parent._render(context)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/base.py", line 142, in _render
+    return self.nodelist.render(context)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/base.py", line 844, in render
+    bit = self.render_node(node, context)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/debug.py", line 80, in render_node
+    return node.render(context)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/loader_tags.py", line 126, in render
+    return compiled_parent._render(context)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/base.py", line 142, in _render
+    return self.nodelist.render(context)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/base.py", line 844, in render
+    bit = self.render_node(node, context)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/debug.py", line 80, in render_node
+    return node.render(context)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/base.py", line 844, in render
+    bit = self.render_node(node, context)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/debug.py", line 80, in render_node
+    return node.render(context)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/base.py", line 844, in render
+    bit = self.render_node(node, context)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/debug.py", line 80, in render_node
+    return node.render(context)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/base.py", line 1207, in render
+    _dict = func(*resolved_args, **resolved_kwargs)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/contrib/admin/templatetags/admin_list.py", line 316, in result_list
+    'results': list(results(cl))}
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/contrib/admin/templatetags/admin_list.py", line 292, in results
+    yield ResultList(None, items_for_result(cl, res, None))
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/contrib/admin/templatetags/admin_list.py", line 283, in __init__
+    super(ResultList, self).__init__(*items)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/contrib/admin/templatetags/admin_list.py", line 198, in items_for_result
+    f, attr, value = lookup_field(field_name, result, cl.model_admin)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/contrib/admin/utils.py", line 280, in lookup_field
+    value = attr()
+  File "/Users/kinsalayon/http/kindredkode/blog/models.py", line 96, in exceprt
+    the_excerpt = ''.join(res)
+TypeError: sequence item 0: expected string, list found
+Internal Server Error: /admin/blog/post/
+Traceback (most recent call last):
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/core/handlers/base.py", line 137, in get_response
+    response = response.render()
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/response.py", line 103, in render
+    self.content = self.rendered_content
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/response.py", line 80, in rendered_content
+    content = template.render(context)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/base.py", line 148, in render
+    return self._render(context)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/base.py", line 142, in _render
+    return self.nodelist.render(context)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/base.py", line 844, in render
+    bit = self.render_node(node, context)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/debug.py", line 80, in render_node
+    return node.render(context)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/loader_tags.py", line 126, in render
+    return compiled_parent._render(context)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/base.py", line 142, in _render
+    return self.nodelist.render(context)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/base.py", line 844, in render
+    bit = self.render_node(node, context)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/debug.py", line 80, in render_node
+    return node.render(context)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/loader_tags.py", line 126, in render
+    return compiled_parent._render(context)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/base.py", line 142, in _render
+    return self.nodelist.render(context)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/base.py", line 844, in render
+    bit = self.render_node(node, context)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/debug.py", line 80, in render_node
+    return node.render(context)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/base.py", line 844, in render
+    bit = self.render_node(node, context)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/debug.py", line 80, in render_node
+    return node.render(context)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/base.py", line 844, in render
+    bit = self.render_node(node, context)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/debug.py", line 80, in render_node
+    return node.render(context)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/base.py", line 1207, in render
+    _dict = func(*resolved_args, **resolved_kwargs)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/contrib/admin/templatetags/admin_list.py", line 316, in result_list
+    'results': list(results(cl))}
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/contrib/admin/templatetags/admin_list.py", line 292, in results
+    yield ResultList(None, items_for_result(cl, res, None))
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/contrib/admin/templatetags/admin_list.py", line 283, in __init__
+    super(ResultList, self).__init__(*items)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/contrib/admin/templatetags/admin_list.py", line 198, in items_for_result
+    f, attr, value = lookup_field(field_name, result, cl.model_admin)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/contrib/admin/utils.py", line 280, in lookup_field
+    value = attr()
+  File "/Users/kinsalayon/http/kindredkode/blog/models.py", line 96, in exceprt
+    the_excerpt = ''.join([str(x) for x in list])
+TypeError: 'type' object is not iterable
