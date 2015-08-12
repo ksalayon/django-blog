@@ -28,18 +28,31 @@ class Navigation(models.Model):
         (TARGET_SELF, 'Self'),
         (TARGET_BLANK, 'Blank')
     )
-    anchor = models.CharField(default=TARGET_SELF, choices=TARGET_CHOICES, max_length = 7)
+    target = models.CharField(default=TARGET_SELF, choices=TARGET_CHOICES, max_length = 7)
     url = models.URLField(blank=True, null=True)
-    
+    order = models.PositiveSmallIntegerField(blank=True, null=True, default=0)
     #Generic FK
     content_type = models.ForeignKey(ContentType, blank=True, null=True)
     object_id = models.PositiveIntegerField(blank=True, null=True)
     content_object = GenericForeignKey('content_type', 'object_id')
     
-    sub_navigations = models.ManyToManyField("self", symmetrical=False, blank=True, null=True)
+    subnavigations = models.ManyToManyField("self", symmetrical=False, blank=True, null=True)
     
+    def href(self):
+        if self.type == self.PAGE_ANCHOR:
+            return '/blog/page/' + str(self.object_id)
+        elif self.type == self.POST_ANCHOR:
+            return '/blog/post/' + str(self.object_id)
+        else:
+            return self.url
+        
+    def get_subnavigations(self):
+        return self.subnavigations.order_by('label')     
+        
     def __str__(self):              # __unicode__ on Python 2
         return self.label
+    class Meta:
+        ordering = ('order',)
 
 class Page(models.Model):
     title = models.CharField(max_length=200)
@@ -51,11 +64,26 @@ class Page(models.Model):
     def __str__(self):              # __unicode__ on Python 2
         return self.title
     
+    def excerpt(self):
+        maxWidth = 6
+        words = strip_tags(self.content).split()
+        return ' '.join(words[0:maxWidth]) + '...'
+    
+    excerpt.admin_order_field = 'content'
+
 class Category(models.Model):
     label = models.CharField(max_length=100)
     
     #Generic FK
     sub_categories = models.ManyToManyField("self", symmetrical=False, blank=True, null=True)
+    
+    def __str__(self):              # __unicode__ on Python 2
+        return self.label
+    class Meta:
+        ordering = ('label',)
+
+class Tag(models.Model):
+    label = models.CharField(max_length=100)
     
     def __str__(self):              # __unicode__ on Python 2
         return self.label
@@ -72,6 +100,7 @@ class Post(models.Model):
     modified = models.DateTimeField(blank=True, null=True)
     
     categories = models.ManyToManyField(Category)
+    tags = models.ManyToManyField(Tag)
     
     def __str__(self):              # __unicode__ on Python 2
         return self.title
@@ -99,7 +128,7 @@ class Comment(models.Model):
 
     def __str__(self):              # __unicode__ on Python 2
         #return self.label
-        return self.wrap(self.comment, 100)
+        return self.excerpt()#self.wrap(self.comment, 100)
     
     def excerpt(self):
         maxWidth = 6

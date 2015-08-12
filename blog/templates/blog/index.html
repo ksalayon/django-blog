@@ -1,0 +1,27 @@
+{% if navigation_list %}
+    <ul>
+    {% for nav in navigation_list %}
+        <li><a href="{{ nav.href }}" target="{{ nav.target }}">{{ nav.label }}</a></li>
+        <ul class="sub-nav">
+        {% if nav.get_subnavigations %}
+            {% for subnav in nav.get_subnavigations %}
+                <li><a href="{{ subnav.href }}" target="{{ subnav.target }}">{{ subnav.label }}</a></li>
+            {% endfor %}
+        {% endif %}
+        </ul>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No navigations are available.</p>
+{% endif %}
+
+{% if latest_post_list %}
+    <ul>
+    {% for post in latest_post_list %}
+        <li><a href="{% url 'blog:post' post.id %}">{{ post.excerpt }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No posts are available.</p>
+{% endif %}
+<br />
