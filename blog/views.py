@@ -15,7 +15,8 @@ def index(request):
 
 def post(request, post_id):
     post = get_object_or_404(Post, pk=post_id)
-    return render(request, 'blog/post.html', {'post': post})
+    latest_comments = Comment.objects.filter(post_id=post_id, approved=True).order_by('-created')[:10]
+    return render(request, 'blog/post.html', {'post': post, 'latest_comments': latest_comments})
 
 def page(request, page_id):
     response = "You're looking at the page with id %s."
@@ -39,7 +40,7 @@ def comment_on_post(request, post_id):
             'error_message': "You didn't enter a name.",
         })
     try:
-        commenter_email = pk=request.POST['email']
+        commenter_email = request.POST['email']
     except (KeyError, Comment.DoesNotExist):
         # Redisplay the question voting form.
         return render(request, 'blog/post.html', {
@@ -47,7 +48,7 @@ def comment_on_post(request, post_id):
             'error_message': "You didn't enter an email.",
         })
     try:
-        comment = pk=request.POST['comment']
+        comment = request.POST['comment']
     except (KeyError, Comment.DoesNotExist):
         # Redisplay the question voting form.
         return render(request, 'blog/post.html', {

@@ -899,3 +899,290 @@ Traceback (most recent call last):
     % (e, self.__class__.__name__))
 FieldError: Unknown field(s) (anchor) specified for Navigation. Check fields/fieldsets/exclude attributes of class NavigationAdmin.
 Not Found: /
+Not Found: /
+Not Found: /favicon.ico
+Not Found: /blog/post/2/post/photog.jpg
+Internal Server Error: /blog/post/2/
+Traceback (most recent call last):
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/kinsalayon/http/kindredkode/blog/views.py", line 18, in post
+    return render(request, 'blog/post.html', {'post': post})
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/shortcuts.py", line 50, in render
+    return HttpResponse(loader.render_to_string(*args, **kwargs),
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/loader.py", line 170, in render_to_string
+    t = get_template(template_name, dirs)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/loader.py", line 144, in get_template
+    template, origin = find_template(template_name, dirs)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/loader.py", line 132, in find_template
+    source, display_name = loader(name, dirs)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/loader.py", line 44, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/loader.py", line 50, in load_template
+    template = get_template_from_string(source, origin, template_name)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/loader.py", line 156, in get_template_from_string
+    return Template(source, origin, name)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/base.py", line 132, in __init__
+    self.nodelist = compile_string(template_string, origin)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/base.py", line 162, in compile_string
+    return parser.parse()
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/base.py", line 290, in parse
+    compiled_result = compile_func(self, token)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/defaulttags.py", line 832, in do_for
+    sequence = parser.compile_filter(bits[in_index + 1])
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/base.py", line 372, in compile_filter
+    return FilterExpression(token, self)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/base.py", line 588, in __init__
+    "from '%s'" % (token[upto:], token))
+TemplateSyntaxError: Could not parse the remainder: '[0:2]' from 'post.comment_set.all[0:2]'
+Not Found: /blog/post/2/post/photog.jpg
+Internal Server Error: /blog/post/2/
+Traceback (most recent call last):
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/kinsalayon/http/kindredkode/blog/views.py", line 18, in post
+    latest_comments = post.comments.obecjts.order_by('created')[:2]
+AttributeError: 'Post' object has no attribute 'comments'
+Internal Server Error: /blog/post/2/
+Traceback (most recent call last):
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/kinsalayon/http/kindredkode/blog/views.py", line 18, in post
+    latest_comments = post.comments_set.order_by('created')[:2]
+AttributeError: 'Post' object has no attribute 'comments_set'
+Internal Server Error: /blog/post/2/
+Traceback (most recent call last):
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/kinsalayon/http/kindredkode/blog/views.py", line 18, in post
+    latest_comments = post.comments_set.order_by('created')[:2]
+AttributeError: 'Post' object has no attribute 'comments_set'
+Internal Server Error: /blog/post/2/
+Traceback (most recent call last):
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/kinsalayon/http/kindredkode/blog/views.py", line 18, in post
+    latest_comments = Comments.objects.filter(post__pk=post_id).order_by('created')[:2]
+NameError: global name 'Comments' is not defined
+Not Found: /blog/post/2/post/photog.jpg
+Internal Server Error: /blog/post/2/
+Traceback (most recent call last):
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/kinsalayon/http/kindredkode/blog/views.py", line 18, in post
+    latest_comments = Comment.objects.filter(post__=post).order_by('created')[:2]
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/db/models/manager.py", line 92, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/db/models/query.py", line 691, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/db/models/query.py", line 709, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/db/models/sql/query.py", line 1331, in add_q
+    clause, require_inner = self._add_q(where_part, self.used_aliases)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/db/models/sql/query.py", line 1358, in _add_q
+    current_negated=current_negated, connector=connector)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/db/models/sql/query.py", line 1225, in build_filter
+    lookups, value)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/db/models/fields/related.py", line 1577, in get_lookup_constraint
+    raise TypeError('Related Field got invalid lookup: %s' % lookup_type)
+TypeError: Related Field got invalid lookup: 
+Not Found: /blog/post/2/post/photog.jpg
+Not Found: /blog/post/2/post/photog.jpg
+Not Found: /blog/post/3/post/photog_TLc0ItP.jpg
+Not Found: /blog/post/2/post/photog.jpg
+Not Found: /blog/post/2/post/photog.jpg
+Not Found: /blog/post/2/post/photog.jpg
+Not Found: /blog/post/2/post/photog.jpg
+Not Found: /blog/post/2/post/photog.jpg
+Not Found: /blog/post/2/post/photog.jpg
+Not Found: /blog/post/2/post/photog.jpg
+Not Found: /blog/post/2/post/photog.jpg
+Not Found: /blog/post/2/post/photog.jpg
+Not Found: /blog/post/2/post/photog.jpg
+Not Found: /blog/post/2/post/photog.jpg
+Not Found: /blog/post/2/post/photog.jpg
+Not Found: /blog/post/2/post/photog.jpg
+Not Found: /blog/post/2/post/photog.jpg
+Internal Server Error: /blog/post/2/
+Traceback (most recent call last):
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/kinsalayon/http/kindredkode/blog/views.py", line 19, in post
+    return render(request, 'blog/post.html', {'post': post, 'latest_comments': latest_comments})
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/shortcuts.py", line 50, in render
+    return HttpResponse(loader.render_to_string(*args, **kwargs),
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/loader.py", line 178, in render_to_string
+    return t.render(context_instance)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/base.py", line 148, in render
+    return self._render(context)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/base.py", line 142, in _render
+    return self.nodelist.render(context)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/base.py", line 844, in render
+    bit = self.render_node(node, context)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/debug.py", line 80, in render_node
+    return node.render(context)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/defaulttags.py", line 162, in render
+    len_values = len(values)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/db/models/query.py", line 122, in __len__
+    self._fetch_all()
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/db/models/query.py", line 966, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/db/models/query.py", line 265, in iterator
+    for row in compiler.results_iter():
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/db/models/sql/compiler.py", line 701, in results_iter
+    for rows in self.execute_sql(MULTI):
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/db/models/sql/compiler.py", line 787, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/db/backends/utils.py", line 81, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/db/backends/utils.py", line 65, in execute
+    return self.cursor.execute(sql, params)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/db/utils.py", line 94, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/db/backends/utils.py", line 65, in execute
+    return self.cursor.execute(sql, params)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/db/backends/mysql/base.py", line 129, in execute
+    return self.cursor.execute(query, args)
+  File "/Users/kinsalayon/http/django/python/lib/python2.7/site-packages/MySQL_python-1.2.3c1-py2.7-macosx-10.5-x86_64.egg/MySQLdb/cursors.py", line 173, in execute
+    self.errorhandler(self, exc, value)
+  File "/Users/kinsalayon/http/django/python/lib/python2.7/site-packages/MySQL_python-1.2.3c1-py2.7-macosx-10.5-x86_64.egg/MySQLdb/connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+OperationalError: (1054, "Unknown column 'blog_comment.approved' in 'field list'")
+Internal Server Error: /blog/post/2/
+Traceback (most recent call last):
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/kinsalayon/http/kindredkode/blog/views.py", line 19, in post
+    return render(request, 'blog/post.html', {'post': post, 'latest_comments': latest_comments})
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/shortcuts.py", line 50, in render
+    return HttpResponse(loader.render_to_string(*args, **kwargs),
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/loader.py", line 178, in render_to_string
+    return t.render(context_instance)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/base.py", line 148, in render
+    return self._render(context)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/base.py", line 142, in _render
+    return self.nodelist.render(context)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/base.py", line 844, in render
+    bit = self.render_node(node, context)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/debug.py", line 80, in render_node
+    return node.render(context)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/defaulttags.py", line 162, in render
+    len_values = len(values)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/db/models/query.py", line 122, in __len__
+    self._fetch_all()
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/db/models/query.py", line 966, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/db/models/query.py", line 265, in iterator
+    for row in compiler.results_iter():
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/db/models/sql/compiler.py", line 701, in results_iter
+    for rows in self.execute_sql(MULTI):
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/db/models/sql/compiler.py", line 787, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/db/backends/utils.py", line 81, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/db/backends/utils.py", line 65, in execute
+    return self.cursor.execute(sql, params)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/db/utils.py", line 94, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/db/backends/utils.py", line 65, in execute
+    return self.cursor.execute(sql, params)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/db/backends/mysql/base.py", line 129, in execute
+    return self.cursor.execute(query, args)
+  File "/Users/kinsalayon/http/django/python/lib/python2.7/site-packages/MySQL_python-1.2.3c1-py2.7-macosx-10.5-x86_64.egg/MySQLdb/cursors.py", line 173, in execute
+    self.errorhandler(self, exc, value)
+  File "/Users/kinsalayon/http/django/python/lib/python2.7/site-packages/MySQL_python-1.2.3c1-py2.7-macosx-10.5-x86_64.egg/MySQLdb/connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+OperationalError: (1054, "Unknown column 'blog_comment.approved' in 'field list'")
+Internal Server Error: /blog/post/2/
+Traceback (most recent call last):
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/kinsalayon/http/kindredkode/blog/views.py", line 19, in post
+    return render(request, 'blog/post.html', {'post': post, 'latest_comments': latest_comments})
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/shortcuts.py", line 50, in render
+    return HttpResponse(loader.render_to_string(*args, **kwargs),
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/loader.py", line 178, in render_to_string
+    return t.render(context_instance)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/base.py", line 148, in render
+    return self._render(context)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/base.py", line 142, in _render
+    return self.nodelist.render(context)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/base.py", line 844, in render
+    bit = self.render_node(node, context)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/debug.py", line 80, in render_node
+    return node.render(context)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/defaulttags.py", line 162, in render
+    len_values = len(values)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/db/models/query.py", line 122, in __len__
+    self._fetch_all()
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/db/models/query.py", line 966, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/db/models/query.py", line 265, in iterator
+    for row in compiler.results_iter():
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/db/models/sql/compiler.py", line 701, in results_iter
+    for rows in self.execute_sql(MULTI):
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/db/models/sql/compiler.py", line 787, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/db/backends/utils.py", line 81, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/db/backends/utils.py", line 65, in execute
+    return self.cursor.execute(sql, params)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/db/utils.py", line 94, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/db/backends/utils.py", line 65, in execute
+    return self.cursor.execute(sql, params)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/db/backends/mysql/base.py", line 129, in execute
+    return self.cursor.execute(query, args)
+  File "/Users/kinsalayon/http/django/python/lib/python2.7/site-packages/MySQL_python-1.2.3c1-py2.7-macosx-10.5-x86_64.egg/MySQLdb/cursors.py", line 173, in execute
+    self.errorhandler(self, exc, value)
+  File "/Users/kinsalayon/http/django/python/lib/python2.7/site-packages/MySQL_python-1.2.3c1-py2.7-macosx-10.5-x86_64.egg/MySQLdb/connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+OperationalError: (1054, "Unknown column 'blog_comment.approved' in 'field list'")
+Internal Server Error: /blog/post/2/
+Traceback (most recent call last):
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/kinsalayon/http/kindredkode/blog/views.py", line 19, in post
+    return render(request, 'blog/post.html', {'post': post, 'latest_comments': latest_comments})
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/shortcuts.py", line 50, in render
+    return HttpResponse(loader.render_to_string(*args, **kwargs),
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/loader.py", line 178, in render_to_string
+    return t.render(context_instance)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/base.py", line 148, in render
+    return self._render(context)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/base.py", line 142, in _render
+    return self.nodelist.render(context)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/base.py", line 844, in render
+    bit = self.render_node(node, context)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/debug.py", line 80, in render_node
+    return node.render(context)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/defaulttags.py", line 311, in render
+    if match:
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/db/models/query.py", line 145, in __nonzero__
+    self._fetch_all()
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/db/models/query.py", line 966, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/db/models/query.py", line 265, in iterator
+    for row in compiler.results_iter():
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/db/models/sql/compiler.py", line 701, in results_iter
+    for rows in self.execute_sql(MULTI):
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/db/models/sql/compiler.py", line 787, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/db/backends/utils.py", line 81, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/db/backends/utils.py", line 65, in execute
+    return self.cursor.execute(sql, params)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/db/utils.py", line 94, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/db/backends/utils.py", line 65, in execute
+    return self.cursor.execute(sql, params)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/db/backends/mysql/base.py", line 129, in execute
+    return self.cursor.execute(query, args)
+  File "/Users/kinsalayon/http/django/python/lib/python2.7/site-packages/MySQL_python-1.2.3c1-py2.7-macosx-10.5-x86_64.egg/MySQLdb/cursors.py", line 173, in execute
+    self.errorhandler(self, exc, value)
+  File "/Users/kinsalayon/http/django/python/lib/python2.7/site-packages/MySQL_python-1.2.3c1-py2.7-macosx-10.5-x86_64.egg/MySQLdb/connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+OperationalError: (1054, "Unknown column 'blog_comment.approved' in 'field list'")
+Not Found: /blog/post/2/post/photog.jpg
+Not Found: /blog/post/2/post/photog.jpg
+Not Found: /blog/post/2/post/photog.jpg

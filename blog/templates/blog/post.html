@@ -8,7 +8,15 @@
 {% endfor %}
 </ul>
 
-
+{% if latest_comments %}
+    {% for comment in latest_comments %}
+        <div for="comment{{ forloop.counter }}">{{comment.commenter_name}}</div><br />
+        <div for="comment{{ forloop.counter }}">{{comment.created}}</div><br />
+        <textarea for="comment{{ forloop.counter }}" disabled="disabled">{{ comment.comment }}</textarea>
+        <br />
+        <br />
+    {% endfor %}
+{% endif %}
 
 {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
 
@@ -24,10 +32,3 @@
     <br />
 </form>
 
-{% for comment in post.comment_set.all %}
-    <div for="comment{{ forloop.counter }}">{{comment.commenter_name}}</div><br />
-    <div for="comment{{ forloop.counter }}">{{comment.created}}</div><br />
-    <textarea for="comment{{ forloop.counter }}" disabled="disabled">{{ comment.comment }}</textarea>
-    <br />
-    <br />
-{% endfor %}

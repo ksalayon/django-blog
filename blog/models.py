@@ -100,7 +100,7 @@ class Post(models.Model):
     modified = models.DateTimeField(blank=True, null=True)
     
     categories = models.ManyToManyField(Category)
-    tags = models.ManyToManyField(Tag)
+    tags = models.ManyToManyField(Tag, blank=True, null=True)
     
     def __str__(self):              # __unicode__ on Python 2
         return self.title
@@ -124,11 +124,12 @@ class Comment(models.Model):
     commenter_website = models.URLField(blank=True, null=True)
     comment = models.TextField();
     ip_address = models.GenericIPAddressField();
+    approved = models.BooleanField(default=False)
     created = models.DateTimeField('date created', default = timezone.now())
 
     def __str__(self):              # __unicode__ on Python 2
         #return self.label
-        return self.excerpt()#self.wrap(self.comment, 100)
+        return self.excerpt()
     
     def excerpt(self):
         maxWidth = 6
