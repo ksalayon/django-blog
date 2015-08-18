@@ -10,11 +10,11 @@ urlpatterns = [
     # ex: /blog/
     url(r'^$', views.index, name='index'),
     # ex: /blog/post/5/
-    url(r'^post/(?P<post_id>[0-9]+)/$', views.post, name='post'),
+    url(r'^post/(?P<pk>[0-9]+)/$', views.PostView.as_view(), name='post'),
     # ex: /blog/page/5/
-    url(r'^page/(?P<page_id>[0-9]+)/$', views.page, name='page'),
+    url(r'^page/(?P<pk>[0-9]+)/$', views.PageView.as_view(), name='page'),
     # ex: /blog/category/5/posts/
-    url(r'^category/(?P<category_id>[0-9]+)/posts/$', views.category_posts, name='category_post'),
+    url(r'^category/(?P<pk>[0-9]+)/posts/$', views.CategoryPostsView.as_view(), name='category_posts'),
     # ex: /blog/post/5/comment
     url(r'^post/(?P<post_id>[0-9]+)/comment/$', views.comment_on_post, name='comment_on_post'),
 ]

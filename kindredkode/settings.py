@@ -36,6 +36,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'compressor',
     'django_summernote',
     'blog'
 )
@@ -94,7 +95,9 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
 
+STATIC_ROOT = os.path.join(BASE_DIR, 'blog/static')
 STATIC_URL = '/static/'
+
 
 #Media 
 MEDIA_ROOT = '/Users/kinsalayon/http/kindredkode/media/'
@@ -136,3 +139,17 @@ TEMPLATES = [
 ]
 
 TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'templates')]
+
+COMPRESS_PRECOMPILERS = (
+    ('text/less', 'lessc {infile} {outfile}'),
+)
+
+STATICFILES_FINDERS = (
+# other static files finder
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    'compressor.finders.CompressorFinder',
+)
+
+COMPRESS_URL = STATIC_URL
+COMPRESS_ROOT = STATIC_ROOT

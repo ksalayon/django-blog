@@ -3,8 +3,10 @@ from django.shortcuts import get_object_or_404, render
 from django.http import HttpResponseRedirect, HttpResponse
 from django.template import RequestContext, loader
 from django.core.urlresolvers import reverse
+from django.views import generic
+from django.views.generic import View
 
-from .models import Post, Page, Navigation, Comment
+from .models import Post, Page, Navigation, Comment, Category
 
 # Create your views here.
 def index(request):
@@ -13,18 +15,29 @@ def index(request):
     context = {'latest_post_list': latest_post_list, 'navigation_list': navigation_list}
     return render(request, 'blog/index.html', context)
 
-def post(request, post_id):
-    post = get_object_or_404(Post, pk=post_id)
-    latest_comments = Comment.objects.filter(post_id=post_id, approved=True).order_by('-created')[:10]
-    return render(request, 'blog/post.html', {'post': post, 'latest_comments': latest_comments})
+class PostView(View):
+    template_name = 'blog/post.html'
+    def get(self, request, *args, **kwargs):
+        category = Category.objects.get(pk=self.kwargs['pk'])
+        post = get_object_or_404(Post, pk=self.kwargs['pk'])
+        latest_comments = Comment.objects.filter(post=post, approved=True).order_by('-created')[:10]
+        return render(request, self.template_name, {'post': post, 'latest_comments': latest_comments})
 
-def page(request, page_id):
-    response = "You're looking at the page with id %s."
-    return HttpResponse(response % page_id)
+class PageView(generic.DetailView):
+    #response = "You're looking at the page with id %s."
+    #return HttpResponse(response % page_id)
+    model = Page
+    template_name = 'blog/page.html'
 
-def category_posts(request, category_id):
-    response = "You're looking at the posts of category %s."
-    return HttpResponse(response % category_id)
+class CategoryPostsView(View):
+    template_name = 'blog/category_posts.html'
+
+    def get(self, request, *args, **kwargs):
+        category = Category.objects.get(pk=self.kwargs['pk'])
+        category_posts = Post.objects.filter(categories=category).order_by('pub_date')[:5]
+        return render(request, self.template_name, {'category_posts': category_posts, 'category': category})
+
+    
 
 def comment_on_post(request, post_id):
     p = get_object_or_404(Post, pk=post_id)

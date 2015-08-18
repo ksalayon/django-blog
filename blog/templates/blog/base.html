@@ -1,0 +1,15 @@
+{% load staticfiles %}
+{% load compress %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    {% if debug %}
+    <link rel="stylesheet" type="text/less" media="all" href="{% static 'blog/css/style.less' %}" />
+    <script src="{% static 'blog/js/less.js' %}"></script>
+    {% else %}
+    {% compress css %}
+    <link rel="stylesheet" type="text/less" media="all" href="{% static 'blog/css/style.less' %}" />
+    {% endcompress %}
+    {% endif %}
+</head>

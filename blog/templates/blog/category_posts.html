@@ -1,0 +1,12 @@
+<h1>Posts for this category</h1>
+<h2>{{ category.label }}</h2>
+{% if category_posts %}
+    {% for post in category_posts %}
+        <div>{{post.title}}</div><br />
+        <div>{{post.excerpt}}</div><br />
+        <br />
+        <br />
+    {% endfor %}
+{% endif %}
+
+
