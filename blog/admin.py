@@ -1,5 +1,6 @@
 from django.contrib import admin
 from .models import Navigation, Page, Category, Post, Comment, Tag
+from django_summernote.admin import SummernoteModelAdmin
 
 # Register your models here.
 
@@ -17,13 +18,13 @@ class CommentInline(admin.StackedInline):
     extra = 1
     list_filter = ['pub_date']
 
-class PostAdmin(admin.ModelAdmin):
+class PostAdmin(SummernoteModelAdmin):
     inlines = [CommentInline]
     list_display = ('title', 'pub_date', 'excerpt')
     list_filter = ['pub_date']
     search_fields = ['title']
     
-class PageAdmin(admin.ModelAdmin):
+class PageAdmin(SummernoteModelAdmin):
     list_display = ('title', 'pub_date', 'excerpt')
     list_filter = ['pub_date']
     search_fields = ['title']

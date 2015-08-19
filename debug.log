@@ -2050,3 +2050,5 @@ Traceback (most recent call last):
   File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/loader.py", line 136, in find_template
     raise TemplateDoesNotExist(name)
 TemplateDoesNotExist: templates/blog/header.html
+Not Found: /blog/post/2/post/photog.jpg
+Not Found: /blog/post/2/post/photog.jpg
