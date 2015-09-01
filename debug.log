@@ -2052,3 +2052,256 @@ Traceback (most recent call last):
 TemplateDoesNotExist: templates/blog/header.html
 Not Found: /blog/post/2/post/photog.jpg
 Not Found: /blog/post/2/post/photog.jpg
+Not Found: /blog/post/2/post/photog.jpg
+Not Found: /blog/post/2/post/photog.jpg
+Not Found: /blog/post/2/post/photog.jpg
+Internal Server Error: /blog/
+Traceback (most recent call last):
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/kinsalayon/http/kindredkode/blog/views.py", line 16, in index
+    return render(request, 'blog/index.html', context)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/shortcuts.py", line 50, in render
+    return HttpResponse(loader.render_to_string(*args, **kwargs),
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/loader.py", line 178, in render_to_string
+    return t.render(context_instance)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/base.py", line 148, in render
+    return self._render(context)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/base.py", line 142, in _render
+    return self.nodelist.render(context)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/base.py", line 844, in render
+    bit = self.render_node(node, context)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/debug.py", line 80, in render_node
+    return node.render(context)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/loader_tags.py", line 150, in render
+    return template.render(context)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/base.py", line 148, in render
+    return self._render(context)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/base.py", line 142, in _render
+    return self.nodelist.render(context)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/base.py", line 844, in render
+    bit = self.render_node(node, context)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/debug.py", line 80, in render_node
+    return node.render(context)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/defaulttags.py", line 312, in render
+    return nodelist.render(context)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/base.py", line 844, in render
+    bit = self.render_node(node, context)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/debug.py", line 80, in render_node
+    return node.render(context)
+  File "/Users/kinsalayon/http/django/python/lib/python2.7/site-packages/compressor/templatetags/compress.py", line 149, in render
+    return self.render_compressed(context, self.kind, self.mode, forced=forced)
+  File "/Users/kinsalayon/http/django/python/lib/python2.7/site-packages/compressor/templatetags/compress.py", line 108, in render_compressed
+    rendered_output = self.render_output(compressor, mode, forced=forced)
+  File "/Users/kinsalayon/http/django/python/lib/python2.7/site-packages/compressor/templatetags/compress.py", line 121, in render_output
+    return compressor.output(mode, forced=forced)
+  File "/Users/kinsalayon/http/django/python/lib/python2.7/site-packages/compressor/css.py", line 51, in output
+    ret.append(subnode.output(*args, **kwargs))
+  File "/Users/kinsalayon/http/django/python/lib/python2.7/site-packages/compressor/css.py", line 53, in output
+    return super(CssCompressor, self).output(*args, **kwargs)
+  File "/Users/kinsalayon/http/django/python/lib/python2.7/site-packages/compressor/base.py", line 291, in output
+    output = '\n'.join(self.filter_input(forced))
+  File "/Users/kinsalayon/http/django/python/lib/python2.7/site-packages/compressor/base.py", line 230, in filter_input
+    for hunk in self.hunks(forced):
+  File "/Users/kinsalayon/http/django/python/lib/python2.7/site-packages/compressor/base.py", line 213, in hunks
+    basename=basename)
+  File "/Users/kinsalayon/http/django/python/lib/python2.7/site-packages/compressor/base.py", line 306, in handle_output
+    return output_func(mode, content, forced, basename)
+  File "/Users/kinsalayon/http/django/python/lib/python2.7/site-packages/compressor/base.py", line 318, in output_file
+    self.storage.save(new_filepath, ContentFile(content.encode(self.charset)))
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/core/files/storage.py", line 50, in save
+    name = self.get_available_name(name)
+  File "/Users/kinsalayon/http/django/python/lib/python2.7/site-packages/compressor/storage.py", line 44, in get_available_name
+    self.delete(name)
+  File "/Users/kinsalayon/http/django/python/lib/python2.7/site-packages/compressor/storage.py", line 53, in delete
+    super(CompressorFileStorage, self).delete(name)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/core/files/storage.py", line 259, in delete
+    os.remove(name)
+OSError: [Errno 13] Permission denied: '/Users/kinsalayon/http/kindredkode/blog/static/CACHE/css/styles.1c5118e5ab48.css'
+Not Found: /favicon.ico
+Not Found: /blog/post/2/post/photog.jpg
+Not Found: /blog/post/2/post/photog.jpg
+Not Found: /blog/post/2/post/googly-fitocracy.png
+Internal Server Error: /blog/post/2/
+Traceback (most recent call last):
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/views/generic/base.py", line 87, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/kinsalayon/http/kindredkode/blog/views.py", line 24, in get
+    return render(request, self.template_name, {'post': post, 'latest_comments': latest_comments})
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/shortcuts.py", line 50, in render
+    return HttpResponse(loader.render_to_string(*args, **kwargs),
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/loader.py", line 170, in render_to_string
+    t = get_template(template_name, dirs)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/loader.py", line 144, in get_template
+    template, origin = find_template(template_name, dirs)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/loader.py", line 132, in find_template
+    source, display_name = loader(name, dirs)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/loader.py", line 44, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/loader.py", line 50, in load_template
+    template = get_template_from_string(source, origin, template_name)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/loader.py", line 156, in get_template_from_string
+    return Template(source, origin, name)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/base.py", line 132, in __init__
+    self.nodelist = compile_string(template_string, origin)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/base.py", line 162, in compile_string
+    return parser.parse()
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/base.py", line 288, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/base.py", line 344, in invalid_block_tag
+    raise self.error(token, "Invalid block tag: '%s'" % command)
+TemplateSyntaxError: Invalid block tag: 'static'
+Internal Server Error: /blog/post/2/
+Traceback (most recent call last):
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/views/generic/base.py", line 87, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/kinsalayon/http/kindredkode/blog/views.py", line 24, in get
+    return render(request, self.template_name, {'post': post, 'latest_comments': latest_comments})
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/shortcuts.py", line 50, in render
+    return HttpResponse(loader.render_to_string(*args, **kwargs),
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/loader.py", line 170, in render_to_string
+    t = get_template(template_name, dirs)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/loader.py", line 144, in get_template
+    template, origin = find_template(template_name, dirs)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/loader.py", line 132, in find_template
+    source, display_name = loader(name, dirs)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/loader.py", line 44, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/loader.py", line 50, in load_template
+    template = get_template_from_string(source, origin, template_name)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/loader.py", line 156, in get_template_from_string
+    return Template(source, origin, name)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/base.py", line 132, in __init__
+    self.nodelist = compile_string(template_string, origin)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/base.py", line 162, in compile_string
+    return parser.parse()
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/base.py", line 288, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/base.py", line 344, in invalid_block_tag
+    raise self.error(token, "Invalid block tag: '%s'" % command)
+TemplateSyntaxError: Invalid block tag: 'static'
+Internal Server Error: /blog/post/2/
+Traceback (most recent call last):
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/views/generic/base.py", line 87, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/kinsalayon/http/kindredkode/blog/views.py", line 24, in get
+    return render(request, self.template_name, {'post': post, 'latest_comments': latest_comments})
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/shortcuts.py", line 50, in render
+    return HttpResponse(loader.render_to_string(*args, **kwargs),
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/loader.py", line 170, in render_to_string
+    t = get_template(template_name, dirs)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/loader.py", line 144, in get_template
+    template, origin = find_template(template_name, dirs)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/loader.py", line 132, in find_template
+    source, display_name = loader(name, dirs)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/loader.py", line 44, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/loader.py", line 50, in load_template
+    template = get_template_from_string(source, origin, template_name)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/loader.py", line 156, in get_template_from_string
+    return Template(source, origin, name)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/base.py", line 132, in __init__
+    self.nodelist = compile_string(template_string, origin)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/base.py", line 162, in compile_string
+    return parser.parse()
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/base.py", line 290, in parse
+    compiled_result = compile_func(self, token)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/contrib/staticfiles/templatetags/staticfiles.py", line 37, in do_static
+    return StaticFilesNode.handle_token(parser, token)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/templatetags/static.py", line 127, in handle_token
+    path = parser.compile_filter(bits[1])
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/base.py", line 372, in compile_filter
+    return FilterExpression(token, self)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/base.py", line 588, in __init__
+    "from '%s'" % (token[upto:], token))
+TemplateSyntaxError: Could not parse the remainder: '{{post.feature_image' from ''media/'{{post.feature_image'
+Internal Server Error: /blog/post/2/
+Traceback (most recent call last):
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/views/generic/base.py", line 87, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/kinsalayon/http/kindredkode/blog/views.py", line 24, in get
+    return render(request, self.template_name, {'post': post, 'latest_comments': latest_comments})
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/shortcuts.py", line 50, in render
+    return HttpResponse(loader.render_to_string(*args, **kwargs),
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/loader.py", line 170, in render_to_string
+    t = get_template(template_name, dirs)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/loader.py", line 144, in get_template
+    template, origin = find_template(template_name, dirs)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/loader.py", line 132, in find_template
+    source, display_name = loader(name, dirs)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/loader.py", line 44, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/loader.py", line 50, in load_template
+    template = get_template_from_string(source, origin, template_name)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/loader.py", line 156, in get_template_from_string
+    return Template(source, origin, name)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/base.py", line 132, in __init__
+    self.nodelist = compile_string(template_string, origin)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/base.py", line 162, in compile_string
+    return parser.parse()
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/base.py", line 290, in parse
+    compiled_result = compile_func(self, token)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/contrib/staticfiles/templatetags/staticfiles.py", line 37, in do_static
+    return StaticFilesNode.handle_token(parser, token)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/templatetags/static.py", line 127, in handle_token
+    path = parser.compile_filter(bits[1])
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/base.py", line 372, in compile_filter
+    return FilterExpression(token, self)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/base.py", line 588, in __init__
+    "from '%s'" % (token[upto:], token))
+TemplateSyntaxError: Could not parse the remainder: '.post.feature_image' from ''media/'.post.feature_image'
+Internal Server Error: /blog/post/2/
+Traceback (most recent call last):
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/views/generic/base.py", line 87, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/kinsalayon/http/kindredkode/blog/views.py", line 24, in get
+    return render(request, self.template_name, {'post': post, 'latest_comments': latest_comments})
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/shortcuts.py", line 50, in render
+    return HttpResponse(loader.render_to_string(*args, **kwargs),
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/loader.py", line 170, in render_to_string
+    t = get_template(template_name, dirs)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/loader.py", line 144, in get_template
+    template, origin = find_template(template_name, dirs)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/loader.py", line 132, in find_template
+    source, display_name = loader(name, dirs)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/loader.py", line 44, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/loader.py", line 50, in load_template
+    template = get_template_from_string(source, origin, template_name)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/loader.py", line 156, in get_template_from_string
+    return Template(source, origin, name)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/base.py", line 132, in __init__
+    self.nodelist = compile_string(template_string, origin)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/base.py", line 162, in compile_string
+    return parser.parse()
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/base.py", line 290, in parse
+    compiled_result = compile_func(self, token)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/contrib/staticfiles/templatetags/staticfiles.py", line 37, in do_static
+    return StaticFilesNode.handle_token(parser, token)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/templatetags/static.py", line 127, in handle_token
+    path = parser.compile_filter(bits[1])
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/base.py", line 372, in compile_filter
+    return FilterExpression(token, self)
+  File "/Users/kinsalayon/http/django/apps/django/lib/python2.7/site-packages/Django-1.7.8-py2.7.egg/django/template/base.py", line 588, in __init__
+    "from '%s'" % (token[upto:], token))
+TemplateSyntaxError: Could not parse the remainder: '.post.feature_image' from ''media/'.post.feature_image'

@@ -1,6 +1,10 @@
+{% include "blog/header.html" %}
+{% load staticfiles %}
+
 <h2>{{ post.title }}</h2>
 <h4>{{ post.pub_date }}</h4>
-<img src="{{post.feature_image }}" />
+<img src="{% static 'media/' %}{{post.feature_image }}" />
+
 <p>{{ post.content|safe }}</p>
 <ul>
 {% for tag in post.tags_set.all %}

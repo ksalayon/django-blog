@@ -100,7 +100,7 @@ STATIC_URL = '/static/'
 
 
 #Media 
-MEDIA_ROOT = '/Users/kinsalayon/http/kindredkode/media/'
+MEDIA_ROOT = os.path.join(STATIC_ROOT, 'media')
 
 
 LOGGING = {
